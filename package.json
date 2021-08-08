@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "Matheus Santos Araújo da Silva <souzamatheus8174@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "phaser": "^3.55.2"
+  }
 }
