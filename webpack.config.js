@@ -3,12 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve('./src/main.js'),
+  entry: path.resolve('./src/main.ts'),
 
   output: {
     filename: 'js/bundle.js'
   },
-
+  resolve: {
+    extensions: ['jsx', '.tsx', '.ts', '.js']
+  },
   devServer: {
     host: '0.0.0.0',
     port: 3000,
@@ -17,7 +19,15 @@ module.exports = {
     publicPath: '/',
     hot: true
   },
-
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
+      }
+    ]
+  },
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
