@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack server",
-    "build": "webpack"
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "Matheus Santos Araújo da Silva <souzamatheus8174@gmail.com>",
