@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack server",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "Matheus Santos Araújo da Silva <souzamatheus8174@gmail.com>",
@@ -14,7 +15,7 @@
   },
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0-alpha.0",
-    "copy-webpack-plugin": "^9.0.1",
+    "html-webpack-plugin": "^5.3.2",
     "webpack": "^5.49.0",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
