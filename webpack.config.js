@@ -1,5 +1,6 @@
-const path = require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -29,6 +30,11 @@ module.exports = {
     ]
   },
   plugins: [
+    new ESLintPlugin({
+      extensions: ['ts', 'tsx'],
+      fix: true
+    }),
+
     new HtmlWebpackPlugin({
       inject: true,
       template: path.resolve(__dirname, 'public/index.html')
@@ -38,4 +44,4 @@ module.exports = {
   ],
 
   mode: 'development'
-}
+};
